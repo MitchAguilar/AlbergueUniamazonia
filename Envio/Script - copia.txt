@@ -1,0 +1,114 @@
+CREATE DATABASE perreraNew;
+USE perreraNew;
+
+CREATE TABLE animal (PK_IdAnimal int(50), NombreAnimal VARCHAR(150), EdadAnimal int(50),
+MarcaAnimal VARCHAR(150), ObservacionAnimal VARCHAR(150),
+FechaIngresoAnimal DATE, SexoAnimal VARCHAR(150), FK_IdEspecieAnimal INT(50), 
+FK_Id_ColorAnimal INT(50),FK_CausaLlegadaAnimal INT(50), 
+FK_IdAdoptador INT(50));
+
+CREATE TABLE estadofisico (PK_IdEstadoFisicoAnimal int(50),
+NombreEstadoFisicoAnimal VARCHAR(150));
+
+CREATE TABLE estadosanitario (PK_IdEstadoSanitarioAnimal int(50),
+NombreEstadoSanitarioAnimal VARCHAR(150));
+
+CREATE TABLE causallegada (PK_IdCausaLlegadaAnimal int(50), 
+NombreCausaLlegadaAnimal VARCHAR(150));
+
+CREATE TABLE estadofisicoanimal (FK_IdAnimal int(50), FK_Id_EstadoFisicoanimal int(50),
+FechaEstadoFisico DATE);
+CREATE TABLE estadosanitarioanimal (FK_IdAnimal int(50), FK_Id_EstadoSanitario int(50),
+FechaEstadoSanitario DATE);
+
+CREATE TABLE coloranimal (PK_IdColorAnimal int(50),  
+NombreColorAnimal VARCHAR(150));
+
+CREATE TABLE especieanimal (PK_IdEspecieAnimal int(50), NombreEspecieAnimal VARCHAR(150));
+
+CREATE TABLE raza (PK_IdRaza int(50), NombreRaza VARCHAR(150), FK_Id_EspecieAnimal int(50));
+
+CREATE TABLE persona (PK_IdPersona int(50), NombrePersona VARCHAR(150),
+ApellidoPersona VARCHAR(150), DocumentoPersona VARCHAR(150),
+CelularPersona VARCHAR(150), Direccion VARCHAR(150),
+CorreoPersona VARCHAR(150), Contrasena VARCHAR(150));
+
+CREATE TABLE adoptador (PK_IdAdoptador int(50), FK_IdPersona int(50));
+
+CREATE TABLE permiso (PK_IdPermiso int(50), NombrePermiso VARCHAR(150));
+
+CREATE TABLE permisopersona (FK_IdPermiso int(50), FK_IdPersona int(50));
+
+CREATE TABLE empleado (PK_IdEmpleado int(50), FK_IdPersona int(50),
+FK_IdCargo int(50));
+
+CREATE TABLE cargo (PK_IdCargo int(50), NombreCargo VARCHAR(150));
+
+
+CREATE TABLE evento (PK_IdEvento int(50), NombreEvento VARCHAR(150),
+DescripcionEvento VARCHAR(150), FechaEvento DATE, LugarEvento VARCHAR(150)); 
+
+CREATE TABLE empleadoevento (FK_IdEmpleado int(50), FK_IdEvento int(50));
+
+CREATE TABLE entidad (PK_IdEntidad int(50), Nombre_Entidad VARCHAR(150)); 
+
+CREATE TABLE eventoentidad (FK_IdEvento int(50),FK_IdEntidad int(50));
+
+CREATE TABLE animalempleado (PK_Id_animalempleado int(50), FK_IdEmpleado int(50), FK_IdAnimal int(50),FechaAnimalEmpleado DATE);
+
+CREATE TABLE servicio (PK_IdServicio int(50), NombreServicio VARCHAR(150), 
+CostoServicio int(150));
+
+CREATE TABLE medicamento (PK_IdMedicamento int(50), NombreMedicamento VARCHAR(150),
+DisponibilidadMedicamento VARCHAR(150), CostoMedicamento VARCHAR(150),
+FK_IdServicio int(50));
+
+CREATE TABLE animalempleadoservicio (PK_Id_animalempleadoservicio int(50), FK_Id_animalempleado int(50), FK_IdServicio int(50),CostoTotalEmpleadoServicio int(150));
+
+
+
+ALTER TABLE animal ADD CONSTRAINT PK_IdAnimal PRIMARY KEY (PK_IdAnimal);
+ALTER TABLE estadosanitario ADD CONSTRAINT PK_IdEstadoSanitarioAnimal PRIMARY KEY (PK_IdEstadoSanitarioAnimal);
+ALTER TABLE estadofisico ADD CONSTRAINT PK_IdEstadoFisicoAnimal PRIMARY KEY (PK_IdEstadoFisicoAnimal);
+ALTER TABLE causallegada ADD CONSTRAINT PK_IdCausaLlegadaAnimal PRIMARY KEY (PK_IdCausaLlegadaAnimal);
+ALTER TABLE coloranimal ADD CONSTRAINT PK_IdColorAnimal PRIMARY KEY (PK_IdColorAnimal);
+ALTER TABLE especieanimal ADD CONSTRAINT PK_IdEspecieAnimal PRIMARY KEY (PK_IdEspecieAnimal);
+ALTER TABLE raza ADD CONSTRAINT PK_IdRaza PRIMARY KEY (PK_IdRaza);
+ALTER TABLE persona ADD CONSTRAINT PK_IdPersona PRIMARY KEY (PK_IdPersona);
+ALTER TABLE adoptador ADD CONSTRAINT PK_IdAdoptador PRIMARY KEY (PK_IdAdoptador);
+ALTER TABLE permiso ADD CONSTRAINT PK_IdPermiso PRIMARY KEY (PK_IdPermiso);
+ALTER TABLE empleado ADD CONSTRAINT PK_IdEmpleado PRIMARY KEY (PK_IdEmpleado);
+ALTER TABLE evento ADD CONSTRAINT PK_IdEvento PRIMARY KEY (PK_IdEvento);
+ALTER TABLE entidad ADD CONSTRAINT PK_IdEntidad PRIMARY KEY (PK_IdEntidad);
+ALTER TABLE servicio ADD CONSTRAINT PK_IdServicio PRIMARY KEY (PK_IdServicio);
+ALTER TABLE medicamento ADD CONSTRAINT PK_IdMedicamento PRIMARY KEY (PK_IdMedicamento);
+ALTER TABLE cargo ADD CONSTRAINT PK_IdCargo PRIMARY KEY (PK_IdCargo);
+ALTER TABLE animalempleado ADD CONSTRAINT PK_IdAnimalempleado PRIMARY KEY (PK_Id_animalempleado);
+ALTER TABLE animalempleadoservicio ADD CONSTRAINT PK_IdAnimalempleadoservicio PRIMARY KEY (PK_Id_animalempleadoservicio);
+
+ALTER TABLE animal ADD FOREIGN KEY (FK_Id_ColorAnimal) REFERENCES coloranimal (PK_IdColorAnimal);
+ALTER TABLE animal ADD FOREIGN KEY (FK_CausaLlegadaAnimal) REFERENCES causallegada (PK_IdCausaLlegadaAnimal);
+ALTER TABLE animal ADD FOREIGN KEY (FK_IdAdoptador) REFERENCES adoptador (PK_IdAdoptador);
+ALTER TABLE animal ADD FOREIGN KEY (FK_IdEspecieAnimal) REFERENCES especieanimal (PK_IdEspecieAnimal);
+ALTER TABLE estadofisicoanimal ADD FOREIGN KEY (FK_IdAnimal) REFERENCES animal (PK_IdAnimal);
+ALTER TABLE estadofisicoanimal ADD FOREIGN KEY (FK_Id_EstadoFisicoanimal) REFERENCES estadofisico (PK_IdEstadoFisicoAnimal);
+ALTER TABLE estadosanitarioanimal ADD FOREIGN KEY (FK_IdAnimal) REFERENCES animal (PK_IdAnimal);
+ALTER TABLE estadosanitarioanimal ADD FOREIGN KEY (FK_Id_EstadoSanitario) REFERENCES estadosanitario (PK_IdEstadoSanitarioAnimal);
+ALTER TABLE raza ADD FOREIGN KEY (FK_Id_EspecieAnimal) REFERENCES especieanimal(PK_Id_EspecieAnimal);
+ALTER TABLE adoptador ADD FOREIGN KEY (FK_IdPersona) REFERENCES persona (PK_IdPersona);
+ALTER TABLE permisopersona ADD FOREIGN KEY (FK_IdPermiso) REFERENCES permiso (PK_IdPermiso);
+ALTER TABLE permisopersona ADD FOREIGN KEY (FK_IdPersona) REFERENCES persona (PK_IdPersona);
+ALTER TABLE empleado  ADD FOREIGN KEY (FK_IdPersona) REFERENCES persona (PK_IdPersona);
+ALTER TABLE empleado  ADD FOREIGN KEY (FK_IdCargo) REFERENCES cargo (PK_IdCargo);
+ALTER TABLE empleadoevento  ADD FOREIGN KEY (FK_IdEmpleado) REFERENCES empleado (PK_IdEmpleado);
+ALTER TABLE empleadoevento  ADD FOREIGN KEY (FK_IdEvento) REFERENCES evento (PK_IdEvento);
+ALTER TABLE eventoentidad  ADD FOREIGN KEY (FK_IdEvento) REFERENCES evento (PK_IdEvento);
+ALTER TABLE eventoentidad  ADD FOREIGN KEY (FK_IdEntidad) REFERENCES entidad (PK_IdEntidad);
+ALTER TABLE animalempleado  ADD FOREIGN KEY (FK_IdEmpleado) REFERENCES empleado (PK_IdEmpleado);
+ALTER TABLE animalempleado ADD FOREIGN KEY (FK_IdAnimal) REFERENCES animal (PK_IdAnimal);
+ALTER TABLE animalempleadoservicio  ADD FOREIGN KEY (FK_Id_animalempleado) REFERENCES animalempleado (PK_Id_animalempleado);
+ALTER TABLE animalempleadoservicio ADD FOREIGN KEY (FK_IdServicio)  REFERENCES servicio  (PK_IdServicio);
+ALTER TABLE medicamento ADD FOREIGN KEY (FK_IdServicio)  REFERENCES servicio  (PK_IdServicio);
+
+
+
