@@ -1,0 +1,72 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PaginaMaestra.master.vb" Inherits="Proyecto.PaginaMaestra" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/bootstrap.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/style.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/style1.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/flexboxgrid.css" />
+    <link rel="stylesheet" href="/Views/PublicViews/Desing/css/font-awesome.css" />
+    <meta name="description" content="A small shelter for cats who wait to be adopted." />
+    <meta name="keywords" content="cats, adoption, shelter, adopt a cat" />
+    <meta name="author" content="St and Jhonier" />
+    <link rel="icon" type="image/png" href="/Views/PublicViews/Desing/index_files/Logo3.png" />
+    <title>Albergue Municipal Florencia </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--Sub-footer-->
+        <section id="shelter">
+            <div class="container">
+                <div class="row center-xs start-sm start-md start-lg">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Contacto</h3>
+                        <ul>
+                            <li>
+                                <i class="fa fa-phone"></i>+57 310 574 13 70
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>st.cardenas@udla.edu.co
+                            </li>
+                            <li>
+                                <i class="fa fa-map"></i>Urbanización La Gloria Etapa 3 (Antigua casa de la hacienda El puerto)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Sobre nosotros</h3>
+                        <p>Este es un lugar que permite albergar a los animales en estado de abandono, maltrato o riesgo bajo la dirección de la Secretaría de Ambiente y desarrollo rural de Florencia.</p>
+                    </div>
+
+                    <footer id="main-footer">
+                        <div class="container">
+                            <div class="row center-xs center-sm center-md center-lg">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <p>
+                                        <br />
+                                        Copyright &copy; 2018 |Albergue Municipal Florencia Caquetá</p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </form>
+</body>
+</html>

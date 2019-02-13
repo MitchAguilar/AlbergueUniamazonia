@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{7FFAC9D1-E694-4733-B118-6D3A465A2778}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Proyecto</RootNamespace>
+    <AssemblyName>Proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Proyecto.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Proyecto.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccesoDatos\Conection\Connection.cs" />
+    <Content Include="AccesoDatos\Conection\Datos.cs" />
+    <Content Include="AccesoDatos\Interface\IDatos.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\PublicViews\Index.aspx" />
+    <Content Include="Views\PublicViews\Desing\css\bootstrap-grid.css" />
+    <Content Include="Views\PublicViews\Desing\css\bootstrap-grid.min.css" />
+    <Content Include="Views\PublicViews\Desing\css\bootstrap-reboot.css" />
+    <Content Include="Views\PublicViews\Desing\css\bootstrap-reboot.min.css" />
+    <Content Include="Views\PublicViews\Desing\css\bootstrap.css" />
+    <Content Include="Views\PublicViews\Desing\css\bootstrap.min.css" />
+    <Content Include="Views\PublicViews\Desing\css\flexboxgrid.css" />
+    <Content Include="Views\PublicViews\Desing\css\font-awesome.css" />
+    <Content Include="Views\PublicViews\Desing\css\style.css" />
+    <Content Include="Views\PublicViews\Desing\css\style1.css" />
+    <Content Include="Views\PublicViews\Desing\css\style2.css" />
+    <Content Include="Views\PublicViews\Desing\css\style3.css" />
+    <Content Include="Views\PublicViews\Desing\fonts\fontawesome-webfont.svg" />
+    <Content Include="Views\PublicViews\Desing\index_files\cat.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\cat1.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\cat2.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Gatos\Gato1.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Gatos\Gato2.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Gatos\Gato3.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Gatos\Gato4.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Gatos\Gato5.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Gatos\Gato6.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Perros\Perro1.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Perros\Perro2.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Perros\Perro3.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Perros\Perro4.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Perros\Perro5.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Cuadros Pequeños\Perros\Perro6.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\edit1.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\favicon.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\fondoRosa.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\GatoPri.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\GatoPri1.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Logo.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\Logo1.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\Logo2.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\Logo2.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\Logo3.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\0dcaacb02ab1a411af137ad607305922.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\56a1e09b-6762-4096-8239-da6b8ed553f7_749_499.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\8b409c22ae7fb00c609f72832e9a06b8.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\Logos\0ae15e66f2be1672974f3e3d86c52e86.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\Logos\35097.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\Logos\aaaaa.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\Logos\dog-cat-veterinary-vector-i8 %281%29.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\Logos\dog-cat-veterinary-vector-icon-260nw-367080008.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\Logos\pet-shop-veterinary-clinic-logo-260nw-1098710690.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\mix.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\perritoadorable.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\para editar\png-2702697_960_720.png" />
+    <Content Include="Views\PublicViews\Desing\index_files\PerroPri.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\pic2.jpg" />
+    <Content Include="Views\PublicViews\Desing\index_files\pic3.jpg" />
+    <Content Include="Views\PublicViews\Desing\js\bootstrap.bundle.js" />
+    <Content Include="Views\PublicViews\Desing\js\bootstrap.bundle.min.js" />
+    <Content Include="Views\PublicViews\Desing\js\bootstrap.js" />
+    <Content Include="Views\PublicViews\Desing\js\bootstrap.min.js" />
+    <Content Include="Views\PublicViews\Desing\js\ScriptUsuario.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Views\PublicViews\Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicViews\Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\PublicViews\PaginaMaestra.Master.designer.vb">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicViews\PaginaMaestra.Master.vb">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Views\PublicViews\PaginaMaestra.Master" />
+    <Content Include="Views\PublicViews\Desing\fonts\fontawesome-webfont.eot" />
+    <Content Include="Views\PublicViews\Desing\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Views\PublicViews\Desing\fonts\fontawesome-webfont.woff" />
+    <Content Include="Views\PublicViews\Desing\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Views\PublicViews\Desing\fonts\FontAwesome.otf" />
+    <Content Include="Views\PublicViews\Desing\index_files\.DS_Store" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\PrivateViews\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53476</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53476/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
