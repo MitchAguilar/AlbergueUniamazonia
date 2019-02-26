@@ -59,10 +59,7 @@
                                 </li>
                                 <li>
                                     <a href="Registrate.aspx">Registrate</a>
-                                </li>
-                                <li>
-                                    <a href="UsuarioConsulta.aspx">Consulta</a>
-                                </li>
+                                </li
                             </ul>
                         </nav>
                     </div>

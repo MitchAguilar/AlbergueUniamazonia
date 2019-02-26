@@ -72,6 +72,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Views\PublicViews\Adoptame.aspx" />
+    <Content Include="Views\PublicViews\conocenos.aspx" />
     <Content Include="Views\PublicViews\Desing\css\bootstrap-grid.css" />
     <Content Include="Views\PublicViews\Desing\css\bootstrap-grid.min.css" />
     <Content Include="Views\PublicViews\Desing\css\bootstrap-reboot.css" />
@@ -130,7 +131,11 @@
     <Content Include="Views\PublicViews\Desing\js\bootstrap.js" />
     <Content Include="Views\PublicViews\Desing\js\bootstrap.min.js" />
     <Content Include="Views\PublicViews\Desing\js\ScriptUsuario.js" />
+    <Content Include="Views\PublicViews\Eventos.aspx" />
+    <Content Include="Views\PublicViews\Fundaciones.aspx" />
     <Content Include="Views\PublicViews\Index.aspx" />
+    <Content Include="Views\PublicViews\Registrate.aspx" />
+    <Content Include="Views\PublicViews\Sesion.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +153,27 @@
     <Compile Include="Views\PublicViews\Adoptame.aspx.designer.cs">
       <DependentUpon>Adoptame.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\PublicViews\conocenos.aspx.cs">
+      <DependentUpon>conocenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PublicViews\conocenos.aspx.designer.cs">
+      <DependentUpon>conocenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicViews\Eventos.aspx.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PublicViews\Eventos.aspx.designer.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicViews\Fundaciones.aspx.cs">
+      <DependentUpon>Fundaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PublicViews\Fundaciones.aspx.designer.cs">
+      <DependentUpon>Fundaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\PublicViews\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +187,20 @@
     </Compile>
     <Compile Include="Views\PublicViews\MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicViews\Registrate.aspx.cs">
+      <DependentUpon>Registrate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PublicViews\Registrate.aspx.designer.cs">
+      <DependentUpon>Registrate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublicViews\Sesion.aspx.cs">
+      <DependentUpon>Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PublicViews\Sesion.aspx.designer.cs">
+      <DependentUpon>Sesion.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +223,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\PrivateViews\" />
+    <Folder Include="Views\PublicViews\Desing\img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
