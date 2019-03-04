@@ -1020,7 +1020,7 @@
     <Content Include="Views\PublicViews\Interno\images\placeholder.png" />
     <Content Include="Views\PublicViews\Interno\images\twitter_corner_black.png" />
     <Content Include="Views\PublicViews\Interno\images\twitter_corner_blue.png" />
-    <Content Include="Views\PublicViews\Interno\Vistas\Configuracion.aspx" />
+    <Content Include="Views\PublicViews\Interno\Vistas\ConfiguracionBorrar.aspx" />
     <Content Include="Views\PublicViews\Interno\Vistas\ConsultarAdministrador.aspx" />
     <Content Include="Views\PublicViews\Interno\Vistas\ConsultarAnimal.aspx" />
     <Content Include="Views\PublicViews\Interno\Vistas\ConsultarEmpleado.aspx" />
@@ -1078,12 +1078,12 @@
     <Compile Include="Views\PublicViews\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\PublicViews\Interno\Vistas\Configuracion.aspx.cs">
-      <DependentUpon>Configuracion.aspx</DependentUpon>
+    <Compile Include="Views\PublicViews\Interno\Vistas\ConfiguracionBorrar.aspx.cs">
+      <DependentUpon>ConfiguracionBorrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\PublicViews\Interno\Vistas\Configuracion.aspx.designer.cs">
-      <DependentUpon>Configuracion.aspx</DependentUpon>
+    <Compile Include="Views\PublicViews\Interno\Vistas\ConfiguracionBorrar.aspx.designer.cs">
+      <DependentUpon>ConfiguracionBorrar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PublicViews\Interno\Vistas\ConsultarAdministrador.aspx.cs">
       <DependentUpon>ConsultarAdministrador.aspx</DependentUpon>

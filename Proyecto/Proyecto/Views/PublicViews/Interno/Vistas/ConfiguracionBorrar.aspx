@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PublicViews/Interno/Vistas/PaginaMaestra2.Master" AutoEventWireup="true" CodeBehind="Configuracion.aspx.cs" Inherits="Proyecto.Views.PublicViews.Interno.Vistas.Configuracion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PublicViews/Interno/Vistas/PaginaMaestra2.Master" AutoEventWireup="true" CodeBehind="ConfiguracionBorrar.aspx.cs" Inherits="Proyecto.Views.PublicViews.Interno.Vistas.Configuracion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
