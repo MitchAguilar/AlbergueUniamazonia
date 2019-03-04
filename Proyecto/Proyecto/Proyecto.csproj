@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base de datos\Script.sql" />
     <Content Include="Global.asax" />
     <Content Include="Views\PublicViews\Adoptame.aspx" />
     <Content Include="Views\PublicViews\conocenos.aspx" />
@@ -134,7 +135,6 @@
     <Content Include="Views\PublicViews\Eventos.aspx" />
     <Content Include="Views\PublicViews\Fundaciones.aspx" />
     <Content Include="Views\PublicViews\Index.aspx" />
-    <Content Include="Views\PublicViews\Interno\.gitattributes" />
     <Content Include="Views\PublicViews\Interno\assets\css\animate.css" />
     <Content Include="Views\PublicViews\Interno\assets\css\bootstrap-select.css" />
     <Content Include="Views\PublicViews\Interno\assets\css\bootstrap.css" />
@@ -1192,6 +1192,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base de datos\Modelo.mwb" />
+    <Content Include="Base de datos\Modelo.mwb.bak" />
+    <Content Include="Base de datos\modelo.pdf" />
     <None Include="packages.config" />
     <Content Include="Views\PublicViews\Desing\fonts\fontawesome-webfont.eot" />
     <Content Include="Views\PublicViews\Desing\fonts\fontawesome-webfont.ttf" />
@@ -1315,8 +1318,6 @@
     <Content Include="Views\PublicViews\Interno\assets\scss\_gauge.scss" />
     <Content Include="Views\PublicViews\Interno\assets\scss\_switches.scss" />
     <Content Include="Views\PublicViews\Interno\assets\scss\_widgets.scss" />
-    <Content Include="Views\PublicViews\Interno\LICENSE" />
-    <Content Include="Views\PublicViews\Interno\README.md" />
     <Content Include="Views\PublicViews\Interno\Vistas\PaginaMaestra2.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
