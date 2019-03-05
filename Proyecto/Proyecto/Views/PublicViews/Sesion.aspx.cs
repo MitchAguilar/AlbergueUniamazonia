@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Proyecto.Models;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,7 +18,18 @@ namespace Proyecto.Views.PublicViews
 
         protected void ButtonEntrar_Click(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", " swal('Error!','Hola mundo', 'error');", true);
+            AL_LOGIN ALO = new AL_LOGIN();
+            DataTable dt = ALO.Consultar(TextEmail.Text, TextContrasena.Text);
+            if (dt.Rows.Count > 0)
+            {
+                Session.Add("DatosUser", dt);
+                Session.Add("ID", 1);
+                Response.Redirect("Interno/Vistas/Index2.aspx");
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", " swal('Error!','Lo setimos, usuario o contraseña incorrectos.', 'error');", true);
+            }
         }
     }
 }

@@ -24,11 +24,13 @@
     <link rel="stylesheet" href="../assets/scss/style.css" />
     <link href="../assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css' />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form runat="server">
       <aside id="left-panel" class="left-panel">
                 <nav class="navbar navbar-expand-sm navbar-default">
 
@@ -108,7 +110,7 @@
 
             <div class="header-menu">
 
-                <div class="col-sm-7">
+                <div class="col-sm-12">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
                         <button class="search-trigger"><i class="fa fa-search"></i></button>
@@ -121,7 +123,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-5">
+                <div class="col-sm-12">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="user-avatar rounded-circle" src="../images/admin.jpg" alt="User Avatar" />
@@ -131,8 +133,7 @@
                         <div class="user-menu dropdown-menu">
 
                             <a class="nav-link" href="#"><i class="fa fa -cog"></i>Configuracion</a>
-
-                            <a class="nav-link" href="../../Vistas/Sesion.aspx"><i class="fa fa-power -off"></i>Cerrar Sesión</a>
+                            <asp:Button ID="salir" runat="server" OnClick="salir_Click" Text="Cerrar Sesión" CssClass="btn btn-primary" />
                         </div>
                     </div>
 
@@ -192,6 +193,6 @@
     <script src="../assets/js/lib/data-table/buttons.print.min.js"></script>
     <script src="../assets/js/lib/data-table/buttons.colVis.min.js"></script>
     <script src="../assets/js/lib/data-table/datatables-init.js"></script>
-
+</form>
 </body>
 </html>

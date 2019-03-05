@@ -19,16 +19,15 @@ namespace Proyecto.Models
 
         }
 
-        public DataTable Consultar()
+        public DataTable Consultar(string usuario,string contrasena)
         {
             try
             {
-                return con.ConsultarDatos("");
+                return con.ConsultarDatos("CALL `PD_LOGIN`('"+usuario+"', '"+contrasena+"');");
             }
             catch (Exception)
             {
-
-                throw;
+                return null;
             }
         }
     }
