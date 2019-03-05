@@ -16,7 +16,7 @@ namespace Proyecto.Views.PublicViews
 
         protected void ButtonEntrar_Click(object sender, EventArgs e)
         {
-
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", " swal('Error!','Hola mundo', 'error');", true);
         }
     }
 }

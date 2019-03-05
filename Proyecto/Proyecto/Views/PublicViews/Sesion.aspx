@@ -5,12 +5,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section id="page">
         <div class="container">
-            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg" style="margin-top: 5%;">
                 <div class="card">
                     <div class="card-body card-block">
                         <div class=" form-group">
                             <div class="col col-md-30">
-                                <label for="text-input" class=" form-control-label">Dirección de correo electrónico</label>
+                                <label for="text-input" class=" form-control-label">Dirección correo usuario</label>
                             </div>
                         </div>
                         <div class=" form-group">
@@ -19,8 +19,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col col-md-18">
-                                <label for="text-input" class=" form-control-label">Contraseña</label>
+                            <div class="col col-md-30">
+                                <label for="text-input" class=" form-control-label">Contraseña de usuario</label>
                             </div>
                         </div>
                         <div class="form-group">

@@ -1042,6 +1042,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AL_LOGIN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\PublicViews\Adoptame.aspx.cs">
       <DependentUpon>Adoptame.aspx</DependentUpon>
@@ -1328,7 +1329,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\PrivateViews\" />
     <Folder Include="Views\PublicViews\Desing\img\" />
     <Folder Include="Views\PublicViews\Interno\assets\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\" />

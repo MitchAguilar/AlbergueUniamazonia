@@ -23,6 +23,7 @@
     <meta name="author" content="St and Jhonier" />
     <link rel="icon" type="image/png" href="/Views/PublicViews/Desing/index_files/Logo3.png" />
     <title>Albergue Municipal Florencia </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
