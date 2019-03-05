@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../assets/scss/style.css" />
     <link href="../assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css' />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -133,12 +133,9 @@
                         <div class="user-menu dropdown-menu">
 
                             <a class="nav-link" href="#"><i class="fa fa -cog"></i>Configuracion</a>
-                            <asp:Button ID="salir" runat="server" OnClick="salir_Click" Text="Cerrar Sesión" CssClass="btn btn-primary" />
+                            <asp:Button ID="salir" runat="server" OnClick="salir_Click" Text="Cerrar Sesión" CssClass="btn-danger" />
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
 
