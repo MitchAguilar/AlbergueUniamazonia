@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-//using Perrera.Vistas;
+using Proyecto.AccesoDatos.Conection;
 
 namespace Perrera.Interno.Vistas
 {
     public class cs_especie_animal
     {
-        ////cs_conexion con = new cs_conexion();
-        //public DataTable consultar_especie_animal()
-        //{
-        //    return con.consultar("CALL CONS_ESPECIE;");
-        //}
+        Datos con = new Datos();
+        public DataTable consultar_especie_animal()
+        {
+            return con.ConsultarDatos("PD_CONSULTAR_ALL_ESPECIE");
+        }
     }
 }

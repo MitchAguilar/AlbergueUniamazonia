@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-//using Perrera.Vistas;
+using Proyecto.AccesoDatos.Conection;
+
 
 namespace Perrera.Interno.Vistas
 {
-    //public class cs_estado_fisico
-    //{
-    //    //cs_conexion con = new cs_conexion();
-    //    public DataTable consultar_estado_fisico()
-    //    {
-    //        return con.consultar("CALL CONS_ESTADO_FISICO");
-    //    }
-    //}
+    public class cs_estado_fisico
+    {
+        Datos con = new Datos();
+        public DataTable consultar_estado_fisico()
+        {
+            return con.ConsultarDatos("PD_CONSULTAR_ALL_ESTADO_FISICO");
+        }
+    }
 }

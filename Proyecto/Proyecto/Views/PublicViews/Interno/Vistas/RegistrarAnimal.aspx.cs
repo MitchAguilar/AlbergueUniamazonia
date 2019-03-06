@@ -19,33 +19,33 @@ namespace Perrera.Interno.Vistas
             cs_especie_animal especie = new cs_especie_animal();
             cs_causa_llegada_animal causa = new cs_causa_llegada_animal();
             cs_color_animal color = new cs_color_animal();
-            //cs_estado_fisico estado_fisico = new cs_estado_fisico();
+            cs_estado_fisico estado_fisico = new cs_estado_fisico();
 
             if(!IsPostBack)
             {
-                //lstespecie.DataSource = especie.consultar_especie_animal();
-                //lstespecie.Items.Add("Seleccione");
-                //lstespecie.DataTextField = "NombreEspecieAnimal";
-                //lstespecie.DataValueField = "PK_IDEspecieAnimal";
-                //lstespecie.DataBind();
+                lstespecie.DataSource = especie.consultar_especie_animal();
+                lstespecie.Items.Add("Seleccione");
+                lstespecie.DataTextField = "NOMBRE";
+                lstespecie.DataValueField = "ID";
+                lstespecie.DataBind();
 
-                //lstcausallegada.DataSource = causa.consultar_causa_llegada();
-                //lstcausallegada.Items.Add("Seleccione");
-                //lstcausallegada.DataTextField = "NombreCausaLlegadaAnimal";
-                //lstcausallegada.DataValueField = "PK_IdCausaLlegadaAnimal";
-                //lstcausallegada.DataBind();
+                lstcausallegada.DataSource = causa.consultar_causa_llegada();
+                lstcausallegada.Items.Add("Seleccione");
+                lstcausallegada.DataTextField = "NOMBRE";
+                lstcausallegada.DataValueField = "ID";
+                lstcausallegada.DataBind();
 
-                //lstcolor.DataSource = color.consultar_color_animal();
-                //lstcolor.Items.Add("Seleccione");
-                //lstcolor.DataTextField = "NombreColorAnimal";
-                //lstcolor.DataValueField = "PK_IdColorAnimal";
-                //lstcolor.DataBind();
+                lstcolor.DataSource = color.consultar_color_animal();
+                lstcolor.Items.Add("Seleccione");
+                lstcolor.DataTextField = "NOMBRE";
+                lstcolor.DataValueField = "ID";
+                lstcolor.DataBind();
 
-                //lstestadofisico.DataSource = estado_fisico.consultar_estado_fisico();
-                //lstestadofisico.Items.Add("Seleccione");
-                //lstestadofisico.DataTextField = "NombreEstadoFisicoAnimal";
-                //lstestadofisico.DataValueField = "PK_IdEstadoFisicoAnimal";
-                //lstestadofisico.DataBind();
+                lstestadofisico.DataSource = estado_fisico.consultar_estado_fisico();
+                lstestadofisico.Items.Add("Seleccione");
+                lstestadofisico.DataTextField = "NOMBRE";
+                lstestadofisico.DataValueField = "ID";
+                lstestadofisico.DataBind();
             }
 
             if (lstespecie.Items.Count != 0)
@@ -61,30 +61,37 @@ namespace Perrera.Interno.Vistas
         private void LoadComboRaza(int especieID)
         {
 
-            //cs_raza_perro razaperro = new cs_raza_perro();
-            //cs_raza_gato razagato = new cs_raza_gato();
+            cs_raza_perro razaperro = new cs_raza_perro();
+            cs_raza_gato razagato = new cs_raza_gato();
 
-            if (!IsPostBack && especieID == 1)
+            if (!IsPostBack && especieID == 2)
             {
-                //lstraza.DataSource = razagato.consultar_raza_gato();
-                //lstraza.Items.Add("Seleccione");
-                //lstraza.DataTextField = "NombreRaza";
-                //lstraza.DataValueField = "PK_IdRaza";
-                //lstraza.DataBind();
+                lstraza.DataSource = razagato.consultar_raza_gato();
+                lstraza.Items.Add("Seleccione");
+                lstraza.DataTextField = "NOMBRE";
+                lstraza.DataValueField = "ID";
+                lstraza.DataBind();
             }
-            else if (!IsPostBack && especieID == 2)
+            else if (!IsPostBack && especieID == 3)
             {
-                //lstraza.DataSource = razaperro.consultar_raza_perro();
-                //lstraza.Items.Add("Seleccione");
-                //lstraza.DataTextField = "NombreRaza";
-                //lstraza.DataValueField = "PK_IdRaza";
-                //lstraza.DataBind();
-            }        
+
+                lstraza.DataSource = razaperro.consultar_raza_perro();
+                lstraza.Items.Add("Seleccione");
+                lstraza.DataTextField = "NOMBRE";
+                lstraza.DataValueField = "ID";
+                lstraza.DataBind();
+            }
         }
 
         protected void lstespecie_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadComboRaza(Convert.ToInt32(lstespecie.SelectedValue));
+        }
+
+        protected void btnguardar_Click(object sender, EventArgs e)
+        {
+            //cs_animal csanimal = new cs_animal();
+            //csanimal.crearanimal("Decrepito");
         }
     }
 }

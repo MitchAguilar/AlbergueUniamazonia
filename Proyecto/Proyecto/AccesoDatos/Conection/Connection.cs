@@ -11,10 +11,10 @@ namespace Proyecto.AccesoDatos.Conection
   public class Connection
   {
     //Cadena de Conexión
-    private static MySqlConnection CONEXION = new MySqlConnection(ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString);
+    public static MySqlConnection CONEXION = new MySqlConnection(ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString);
 
     //Metodo de conexión con mysql
-    protected static MySqlConnection Conectar()
+    public static MySqlConnection Conectar()
     {
       try
       {
@@ -29,7 +29,7 @@ namespace Proyecto.AccesoDatos.Conection
     }
 
     //Metodo de desconectar MySql
-    protected static void Desconector()
+    public static void Desconector()
     {
       CONEXION.Close();
     }

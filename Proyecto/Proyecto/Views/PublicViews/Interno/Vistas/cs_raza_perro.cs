@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-//using Perrera.Vistas;
+using Proyecto.AccesoDatos.Conection;
 
 namespace Perrera.Interno.Vistas
 {
-    //public class cs_raza_perro
-    //{
-    //    //cs_conexion con = new cs_conexion();
-    //    public DataTable consultar_raza_perro()
-    //    {
-    //        return con.consultar("CALL CONS_RAZA_PERRO;");
-    //    }
-    //}
+    public class cs_raza_perro
+    {
+        Datos con = new Datos();
+        public DataTable consultar_raza_perro()
+        {
+            return con.ConsultarDatos("PD_CONSULTAR_RAZA_PERRO;");
+        }
+    }
 }

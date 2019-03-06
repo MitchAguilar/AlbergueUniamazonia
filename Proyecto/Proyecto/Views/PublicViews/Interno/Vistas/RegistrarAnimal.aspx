@@ -71,7 +71,7 @@
                             </div>
                             <div class="col-12 col-md-4">
                                 <%--<input type="text" id="text1" name="text-input" placeholder="Text" class="form-control"><small class="form-text text-muted"></small>--%>
-                                <asp:TextBox ID="TextEdadAproxAnimal" placeholder="1 Año" class="form-control" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextEdadAproxAnimal" placeholder="Meses" class="form-control" runat="server"></asp:TextBox>
                             </div>
 
                             <div class="col col-md-1">
@@ -163,9 +163,8 @@
                 </div>
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-dot-circle-o"></i>Guardar                      
-                    </button>
+                    <asp:Button id="btnguardar" Text="Guardar" class="btn btn-primary btn-sm" onclick="btnguardar_Click" runat="server">                   
+                    </asp:Button> 
 
                     <button type="reset" class="btn btn-danger btn-sm">
                         <i class="fa fa-ban"></i>Borrar                     
