@@ -14,21 +14,21 @@ namespace Perrera.Interno.Vistas
         {
             try
             {
-                if (Session["DatosUser"] == null)
-                {
-                    Response.Redirect("../../Sesion.aspx");
-                }
-                else
-                {
-                    int flag = (int)Session["ID"];
-                    if (flag == 1)
-                    {
-                        DataTable dt = (DataTable)Session["DatosUser"];
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "swal('Bienvenido!', 'Te damos la bienvenida a esta gran plataforma, es un gusto tenerte por aquí " + dt.Rows[0]["NOMBRE"] + "','info')", true);
-                        Session.Add("ID", 0);
+                //if (Session["DatosUser"] == null)
+                //{
+                //    Response.Redirect("../../Sesion.aspx");
+                //}
+                //else
+                //{
+                //    int flag = (int)Session["ID"];
+                //    if (flag == 1)
+                //    {
+                //        DataTable dt = (DataTable)Session["DatosUser"];
+                //        ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "swal('Bienvenido!', 'Te damos la bienvenida a esta gran plataforma, es un gusto tenerte por aquí " + dt.Rows[0]["NOMBRE"] + "','info')", true);
+                //        Session.Add("ID", 0);
 
-                    }
-                }
+                //    }
+                //}
             }
             catch (Exception)
             {

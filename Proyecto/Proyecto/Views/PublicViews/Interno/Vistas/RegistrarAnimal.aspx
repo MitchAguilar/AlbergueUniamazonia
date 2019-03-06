@@ -36,14 +36,17 @@
                                 <label for="select" class=" form-control-label">Especie</label>
                             </div>
                             <div class="col-12 col-md-4">
-                                <asp:DropDownList name="select" ID="lstespecie" class="form-control" OnSelectedIndexChanged="lstespecie_SelectedIndexChanged" runat="server"></asp:DropDownList>
+
+                                <asp:DropDownList name="select" ID="lstespecie"
+                                    class="form-control"
+                                    AutoPostBack="true"
+                                    OnSelectedIndexChanged="lstespecie_SelectedIndexChanged"
+                                    runat="server">
+                                    
+                                </asp:DropDownList>
+
                             </div>
-
-
                         </div>
-
-
-
                         <div class="row form-group">
                             <div class="col col-md-3">
                                 <label for="select" class=" form-control-label">Raza</label>
@@ -163,8 +166,7 @@
                 </div>
 
                 <div class="card-footer">
-                    <asp:Button id="btnguardar" Text="Guardar" class="btn btn-primary btn-sm" onclick="btnguardar_Click" runat="server">                   
-                    </asp:Button> 
+                    <%--<asp:Button ID="btnguardar" Text="Guardar" class="btn btn-primary btn-sm" OnClick="btnguardar_Click" runat="server"></asp:Button>--%>
 
                     <button type="reset" class="btn btn-danger btn-sm">
                         <i class="fa fa-ban"></i>Borrar                     
