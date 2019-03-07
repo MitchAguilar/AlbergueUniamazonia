@@ -14,23 +14,18 @@ namespace Perrera.Interno.Vistas
 {
     public partial class RegistrarAnimal : System.Web.UI.Page
     {
+        cs_especie_animal especie = new cs_especie_animal();
+        cs_causa_llegada_animal causa = new cs_causa_llegada_animal();
+        cs_color_animal color = new cs_color_animal();
+        cs_estado_fisico estado_fisico = new cs_estado_fisico();
+        cs_raza_perro razaperro = new cs_raza_perro();
+        cs_raza_gato razagato = new cs_raza_gato();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            cs_especie_animal especie = new cs_especie_animal();
-            cs_causa_llegada_animal causa = new cs_causa_llegada_animal();
-            cs_color_animal color = new cs_color_animal();
-            cs_estado_fisico estado_fisico = new cs_estado_fisico();
-            cs_raza_perro razaperro = new cs_raza_perro();
-            cs_raza_gato razagato = new cs_raza_gato();
 
             if (!IsPostBack)
             {
-                lstespecie.DataSource = especie.consultar_especie_animal();
-                lstespecie.Items.Add("Seleccione");
-                lstespecie.DataTextField = "NOMBRE";
-                lstespecie.DataValueField = "ID";
-                lstespecie.DataBind();
-
                 lstcausallegada.DataSource = causa.consultar_causa_llegada();
                 lstcausallegada.Items.Add("Seleccione");
                 lstcausallegada.DataTextField = "NOMBRE";
@@ -48,40 +43,77 @@ namespace Perrera.Interno.Vistas
                 lstestadofisico.DataTextField = "NOMBRE";
                 lstestadofisico.DataValueField = "ID";
                 lstestadofisico.DataBind();
-            }
 
-            if (lstespecie.SelectedValue == "1")
-            {
-                lstraza.DataSource = razagato.consultar_raza_gato();
-                lstraza.Items.Add("Seleccione");
-                lstraza.DataTextField = "NOMBRE";
-                lstraza.DataValueField = "ID";
-                lstraza.DataBind();
-                lstespecie.DataSource = especie.consultar_especie_animal();
-                lstespecie.Items.Add("Seleccione");
-                lstespecie.DataTextField = "NOMBRE";
-                lstespecie.DataValueField = "ID";
-                lstespecie.DataBind();
+                //if (rbCanino.Checked)
+                //{
+                //    lstraza.DataSource = razagato.consultar_raza_gato();
+
+                //}
+                //else if (rbFelino.Checked)
+                //{
+                //    lstraza.DataSource = razaperro.consultar_raza_perro();
+                //}
+                //lstraza.Items.Add("Seleccione");
+                //lstraza.DataTextField = "NOMBRE";
+                //lstraza.DataValueField = "ID";
+                //lstraza.DataBind();
             }
             else
             {
+                bool bl = rbCanino.Checked;
+                bool bl2 = rbFelino.Checked;
 
-                lstraza.DataSource = razaperro.consultar_raza_perro();
-                lstraza.Items.Add("Seleccione");
-                lstraza.DataTextField = "NOMBRE";
-                lstraza.DataValueField = "ID";
-                lstraza.DataBind();
-                lstespecie.DataSource = especie.consultar_especie_animal();
-                lstespecie.Items.Add("Seleccione");
-                lstespecie.DataTextField = "NOMBRE";
-                lstespecie.DataValueField = "ID";
-                lstespecie.DataBind();
             }
+
         }
 
-        protected void lstespecie_SelectedIndexChanged(object sender, EventArgs e)
+
+        protected void rbCanino_CheckedChanged(object sender, EventArgs e)
         {
 
+            if (rbCanino.Checked)
+            {
+                lstraza.DataSource = razagato.consultar_raza_gato();
+
+            }
+            else if (rbFelino.Checked)
+            {
+                lstraza.DataSource = razaperro.consultar_raza_perro();
+            }
+            lstraza.Items.Add("Seleccione");
+            lstraza.DataTextField = "NOMBRE";
+            lstraza.DataValueField = "ID";
+            lstraza.DataBind();
+        }
+
+        protected void rbFelino_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (rbCanino.Checked)
+            {
+                lstraza.DataSource = razagato.consultar_raza_gato();
+
+            }
+            else if (rbFelino.Checked)
+            {
+                lstraza.DataSource = razaperro.consultar_raza_perro();
+            }
+            lstraza.Items.Add("Seleccione");
+            lstraza.DataTextField = "NOMBRE";
+            lstraza.DataValueField = "ID";
+            lstraza.DataBind();
+        }
+
+        protected void btnsave_Click(object sender, EventArgs e)
+        {
+            bool bl = rbCanino.Checked;
+            bool bl2 = rbFelino.Checked;
+        }
+
+        protected void btnsave_Click1(object sender, EventArgs e)
+        {
+            bool bl = rbCanino.Checked;
+            bool bl2 = rbFelino.Checked;
         }
     }
 }

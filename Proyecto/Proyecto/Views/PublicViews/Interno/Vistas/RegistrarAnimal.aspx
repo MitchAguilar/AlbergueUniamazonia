@@ -37,14 +37,35 @@
                             </div>
                             <div class="col-12 col-md-4">
 
-                                <asp:DropDownList name="select" ID="lstespecie"
-                                    class="form-control"
-                                    AutoPostBack="true"
-                                    OnSelectedIndexChanged="lstespecie_SelectedIndexChanged"
-                                    runat="server">
-                                    
-                                </asp:DropDownList>
-
+                                <div class="col col-md-9">
+                                    <div class="form-check-inline form-check">
+                                        <label for="inline-radio1" class="form-check-label ">
+                                            <asp:RadioButton 
+                                                ID="rbFelino" 
+                                                GroupName="Controls" 
+                                                Text="Felino"  
+                                                class="form-check-input form-control" 
+                                                runat="server"
+                                                ClientIDMode="Static" 
+                                                AutoPostBack="true"  
+                                                OnCheckedChanged="rbFelino_CheckedChanged" />
+                               
+                                        </label>
+                                        <label for="inline-radio2" class="form-check-label"> 
+                                             <asp:RadioButton 
+                                                 ID="rbCanino" 
+                                                 GroupName="Controls"  
+                                                 Text="Canino"
+                                                 ClientIDMode="Static" 
+                                                 class="form-check-input form-control" 
+                                                 runat="server" 
+                                                 AutoPostBack="true" 
+                                                 OnCheckedChanged="rbCanino_CheckedChanged"/>
+                                        </label>
+                                       
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                         <div class="row form-group">
@@ -162,12 +183,11 @@
                             </div>
                         </div>
 
-                    </form>
                 </div>
 
                 <div class="card-footer">
                     <%--<asp:Button ID="btnguardar" Text="Guardar" class="btn btn-primary btn-sm" OnClick="btnguardar_Click" runat="server"></asp:Button>--%>
-
+                    <asp:Button ID="btnsave" runat="server" Text="ServerClick" OnClick="btnsave_Click1" />
                     <button type="reset" class="btn btn-danger btn-sm">
                         <i class="fa fa-ban"></i>Borrar                     
                     </button>
