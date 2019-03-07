@@ -13,58 +13,59 @@
                 </div>
 
                 <div class="card-body card-block">
+                    <form action="0" method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label class=" form-control-label">Codigo</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <p class="form-control-static"># 000001</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="text-input" class=" form-control-label">Nombre</label>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <asp:TextBox ID="TextNombreAnimal" placeholder="Nombre" class="form-control" runat="server"></asp:TextBox>
+                                <%--<input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control"><small class="form-text text-muted"></small>--%>
+                            </div>
+                            <div class="col col-md-1">
+                                <label for="select" class=" form-control-label">Especie</label>
+                            </div>
+                            <div class="col-12 col-md-4">
 
-                    <div class="row form-group">
-                        <div class="col col-md-3">
-                            <label class=" form-control-label">Codigo</label>
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <p class="form-control-static"># 000001</p>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col col-md-3">
-                            <label for="text-input" class=" form-control-label">Nombre</label>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <asp:TextBox ID="TextNombreAnimal" placeholder="Nombre" class="form-control" runat="server"></asp:TextBox>
-                            <%--<input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control"><small class="form-text text-muted"></small>--%>
-                        </div>
-                        <div class="col col-md-1">
-                            <label for="select" class=" form-control-label">Especie</label>
-                        </div>
-                        <div class="col-12 col-md-4">
+                                <div class="col col-md-9">
+                                    <div class="form-check-inline form-check">
+                                        <label for="inline-radio1" class="form-check-label ">
+                                            <asp:RadioButton
+                                                ID="rbFelino"
+                                                GroupName="Controls"
+                                                Text="Felino"
+                                                class="form-check-input form-control"
+                                                runat="server"
+                                                ClientIDMode="Static"
+                                                AutoPostBack="true"
+                                                OnCheckedChanged="rbFelino_CheckedChanged" />
 
-                            <div class="col col-md-9">
-                                <div class="form-check-inline form-check">
-                                    <label for="inline-radio1" class="form-check-label ">
-                                        <asp:RadioButton
-                                            ID="rbFelino"
-                                            GroupName="Controls"
-                                            Text="Felino"
-                                            class="form-check-input form-control"
-                                            runat="server"
-                                            ClientIDMode="Static"
-                                            AutoPostBack="true"
-                                            OnCheckedChanged="rbFelino_CheckedChanged" />
+                                        </label>
+                                        <label for="inline-radio2" class="form-check-label">
+                                            <asp:RadioButton
+                                                ID="rbCanino"
+                                                GroupName="Controls"
+                                                Text="Canino"
+                                                ClientIDMode="Static"
+                                                class="form-check-input form-control"
+                                                runat="server"
+                                                AutoPostBack="true"
+                                                OnCheckedChanged="rbCanino_CheckedChanged" />
+                                        </label>
 
-                                    </label>
-                                    <label for="inline-radio2" class="form-check-label">
-                                        <asp:RadioButton
-                                            ID="rbCanino"
-                                            GroupName="Controls"
-                                            Text="Canino"
-                                            ClientIDMode="Static"
-                                            class="form-check-input form-control"
-                                            runat="server"
-                                            AutoPostBack="true"
-                                            OnCheckedChanged="rbCanino_CheckedChanged" />
-                                    </label>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-3">
