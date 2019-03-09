@@ -1053,8 +1053,7 @@
     <Compile Include="Models\cs_consultar_animal.cs" />
     <Compile Include="Models\cs_especie_animal.cs" />
     <Compile Include="Models\cs_estado_fisico.cs" />
-    <Compile Include="Models\cs_raza_gato.cs" />
-    <Compile Include="Models\cs_raza_perro.cs" />
+    <Compile Include="Models\cs_raza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\PrivateViews\ConfiguracionBorrar.aspx.cs">
       <DependentUpon>ConfiguracionBorrar.aspx</DependentUpon>

@@ -34,33 +34,9 @@
                                 <label for="select" class=" form-control-label">Especie</label>
                             </div>
                             <div class="col-12 col-md-4">
-
                                 <div class="col col-md-9">
                                     <div class="form-check-inline form-check">
-                                        <label for="inline-radio1" class="form-check-label ">
-                                            <asp:RadioButton
-                                                ID="rbFelino"
-                                                GroupName="Controls"
-                                                Text="Felino"
-                                                class="form-check-input form-control"
-                                                runat="server"
-                                                ClientIDMode="Static"
-                                                AutoPostBack="true"
-                                                OnCheckedChanged="rbFelino_CheckedChanged" />
-
-                                        </label>
-                                        <label for="inline-radio2" class="form-check-label">
-                                            <asp:RadioButton
-                                                ID="rbCanino"
-                                                GroupName="Controls"
-                                                Text="Canino"
-                                                ClientIDMode="Static"
-                                                class="form-check-input form-control"
-                                                runat="server"
-                                                AutoPostBack="true"
-                                                OnCheckedChanged="rbCanino_CheckedChanged" />
-                                        </label>
-
+                                        <asp:DropDownList ID="lstespecie" class="form-control" runat="server" OnSelectedIndexChanged="lstespecie_SelectedIndexChanged"></asp:DropDownList>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +48,7 @@
                         <label for="select" class=" form-control-label">Raza</label>
                     </div>
                     <div class="col-12 col-md-4">
-                        <asp:DropDownList name="select" ID="lstraza" class="form-control" runat="server"></asp:DropDownList>
+                        <asp:DropDownList  ID="lstraza" class="form-control" runat="server"></asp:DropDownList>
                     </div>
 
                     <div class="col col-md-1">
@@ -173,8 +149,8 @@
             </div>
 
             <div class="card-footer">
-                <%--<asp:Button ID="btnguardar" Text="Guardar" class="btn btn-primary btn-sm" OnClick="btnguardar_Click" runat="server"></asp:Button>--%>
-                <asp:Button ID="btnsave" runat="server" Text="ServerClick" OnClick="btnsave_Click1" />
+                <asp:Button ID="btnguardar" Text="Guardar" class="btn btn-primary btn-sm" runat="server"></asp:Button>
+                <asp:Button ID="btnsave" runat="server" Text="ServerClick" />
                 <button type="reset" class="btn btn-danger btn-sm">
                     <i class="fa fa-ban"></i>Borrar                     
                 </button>

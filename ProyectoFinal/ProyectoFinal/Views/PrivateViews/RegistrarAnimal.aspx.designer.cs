@@ -22,22 +22,13 @@ namespace ProyectoFinal.Views.PrivateViews {
         protected global::System.Web.UI.WebControls.TextBox TextNombreAnimal;
         
         /// <summary>
-        /// Control rbFelino.
+        /// Control lstespecie.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbFelino;
-        
-        /// <summary>
-        /// Control rbCanino.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbCanino;
+        protected global::System.Web.UI.WebControls.DropDownList lstespecie;
         
         /// <summary>
         /// Control lstraza.
@@ -92,6 +83,15 @@ namespace ProyectoFinal.Views.PrivateViews {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList lstestadofisico;
+        
+        /// <summary>
+        /// Control btnguardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnguardar;
         
         /// <summary>
         /// Control btnsave.
